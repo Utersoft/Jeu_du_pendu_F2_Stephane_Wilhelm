@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1605801148 source:c:\users\djame\documents\github\jeu_du_pendu_f2_stephane_wilhelm\jeu_du_pendu_f2_stephane_wilhelm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
