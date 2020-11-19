@@ -193,6 +193,7 @@ void affich_pendu(int compteur);
 int main()
 {
     char mot[TAILLEMAX];
+    char lettreUtilise[100] = {""};
     char lettreSaisie;
     char motCache[TAILLEMAX];
     int compteur = ESSAIMAX;
@@ -201,6 +202,7 @@ int main()
     int tailleMot = 0;
     char motPropose[TAILLEMAX];
     int choix = 0;
+    int i = 0;
 
     init_mot(mot);
     tailleMot = strlen(mot);
@@ -210,6 +212,7 @@ int main()
         system("cls");
         printf("%s\n", motCache);
         affich_pendu(compteur);
+        printf("%s\n", lettreUtilise);
         printf("Voulez-vous tenter d'entrer un mot?\n");
         printf("1. Oui\n2. Non\n");
         fflush(stdin);
@@ -232,6 +235,8 @@ int main()
             if(perte_point(lettreSaisie, mot)){
                 compteur --;
                 printf("La lettre n'est pas contenu dans le mot, vous perdez un point. Il vous reste %d chance(s).\n", compteur);
+                lettreUtilise[i] = lettreSaisie;
+                i++;
             }
             //Si le mot est bon, fin_victoire passe à 1 (true)
             fin_victoire = condition_victoire(mot, motCache, tailleMot);
@@ -284,11 +289,9 @@ void init_affichage(char mot[], char motCache[], int tailleMot){
     int i = 0;
     for(i = 0; i < tailleMot; i++){
         if ((mot[i] > 64 && mot[i] < 91) || (mot[i] > 96 && mot[i] < 123)){
-            motCache[i] = '_';
+            motCache[i] = '-';
         }else if(mot[i] == 32){
             motCache[i] = ' ';
-        }else if(mot[i] == 45){
-            motCache[i] == '-';
         }
     }
 }
