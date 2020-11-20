@@ -1,6 +1,15 @@
 # depslib dependency file v1.0
-1605803509 source:c:\users\djame\documents\github\jeu_du_pendu_f2_stephane_wilhelm\jeu_du_pendu_f2_stephane_wilhelm\main.c
+1605870554 source:c:\users\djame\documents\github\jeu_du_pendu_f2_stephane_wilhelm\jeu_du_pendu_f2_stephane_wilhelm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"define.h"
+
+1605869908 c:\users\djame\documents\github\jeu_du_pendu_f2_stephane_wilhelm\jeu_du_pendu_f2_stephane_wilhelm\define.h
+
+1605870554 source:c:\users\djame\documents\github\jeu_du_pendu_f2_stephane_wilhelm\jeu_du_pendu_f2_stephane_wilhelm\fct_pendu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"define.h"
 
